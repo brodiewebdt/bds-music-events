@@ -168,6 +168,16 @@
     flex-direction: column;
     gap: calc(24 / 16 * 1rem);
     margin-block: calc(24 / 16 * 1rem);
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: calc(32 / 16 * 1rem);
+    }
+
+    @media (width >= calc(1000 / 16 * 1rem)) {
+      display: flex;
+    }
   }
 
   .music__events-item {
@@ -180,6 +190,8 @@
     background-color: var(--color-bg-light);
     padding: calc(24 / 16 * 1rem) calc(16 / 16 * 1rem);
     border-radius: 16px;
+
+    height: 100%;
 
     @media (width >= calc(1000 / 16 * 1rem)) {
       display: grid;
@@ -247,6 +259,12 @@
   }
 
   .event-ticket {
+    margin-block-start: auto;
+
+    @media (width >= calc(1000 / 16 * 1rem)) {
+      margin-block-start: initial;
+    }
+
     &.full {
       background-color: var(--color-bg-light);
       color: var(--color-text-dark);
